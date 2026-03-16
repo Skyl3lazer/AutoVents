@@ -31,7 +31,7 @@ namespace AutoVents
 			var intVec = Position + IntVec3.South.RotatedBy(Rotation);
 			var intVec2 = Position + IntVec3.North.RotatedBy(Rotation);
 
-			if(intVec.GetVacuum(Map) == 0 || intVec2.GetVacuum(Map) == 0)
+			if(intVec.GetVacuum(Map) > 50 || intVec2.GetVacuum(Map) > 50)
 			{
                 HandleAirFlowChange(false);
 
